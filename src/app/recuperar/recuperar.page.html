@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor" class="alinear">
+    <br><ion-title class="titulo">Recuperar Correo</ion-title><br>
+  </ion-toolbar>
+</ion-header >
+
+<ion-content>
+<ion-item>
+<ion-label position="floating">Contraseña nueva</ion-label>
+  <ion-input #apellido></ion-input>
+</ion-item>  
+<ion-item>
+  <ion-label position="floating">Repetir contraseña</ion-label>
+  <ion-input #correo></ion-input>
+</ion-item>
+<div *ngIf="mensaje;">
+  <h3 id="Error">Mensaje: {{mensaje}}</h3>
+</div>
+
+</ion-content>
+<ion-footer>
+<ion-toolbar>
+  <ion-button (click)="grabar(nombre, apellido, correo)" color="danger">
+    <ion-icon slot="icon-only" name="radio-button-on-outline"></ion-icon>
+  </ion-button>
+  <ion-button (click)="limpiar(nombre, apellido, correo)" color="light" slot="end">
+    <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+  </ion-button>
+</ion-toolbar>
+</ion-footer>

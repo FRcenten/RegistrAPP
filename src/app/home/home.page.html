@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor" class="alinear">
+     <img src="/assets/icon/logo.png" />
+    <br><ion-title class="titulo">RegistrAPP</ion-title><br>
+  </ion-toolbar>
+</ion-header >
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="mycolor">
+      <ion-title size="large" class="titulo">RegistrAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div id="container">
+    <form [formGroup]="formularioLogin">
+      <ion-item>
+        <ion-label position="floating">Cuenta o dirección de correo</ion-label>
+        <ion-input formControlName="cuenta"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="contraseña" type="password"></ion-input>
+      </ion-item>
+    </form>
+        <ion-button fill="clear" color="dark" class="ion-text-capitalize" [routerLink]="['/recuperar']">Olvidaste tu contraseña?</ion-button>
+          
+              <ion-button size="small"color="warning" (click)="ingresar()">Ingresar</ion-button>
+              <ion-button size="small" color="warning" [routerLink]="['/registro']">Registrarse</ion-button>
+  </div>
+</ion-content>
+
+<!-- Footer -->
+<ion-footer collapse="fade">
+  <ion-toolbar color="mycolor">
+    <ion-title size="small" class="titulo">Copyright © Todos los derechos reservados</ion-title>
+  </ion-toolbar>
+</ion-footer>
