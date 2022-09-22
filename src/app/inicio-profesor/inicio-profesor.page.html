@@ -1,7 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="mycolor" class="alinear">
-    <br><ion-title class="titulo">Profesor</ion-title><br>
+    <br><ion-title class="titulo">Profesor@</ion-title><br>
   </ion-toolbar>
 </ion-header >
+
 <ion-content>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Matematica</ion-label>
+      </ion-item>
+      <div  class="ion-padding" slot="content">
+        <ion-button  expand="full" href="asistencia2" color="dark">
+          QR Asistencia
+         </ion-button>
+         <ion-button  expand="full"  href="lista1"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Lenguaje</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-button  expand="full" href="asistencia1" color="dark">
+          QR Asistencia
+         </ion-button>
+         <ion-button  expand="full"  href="lista1"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Ingles</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-button  expand="full" href="asistencia" color="dark">
+          QR Asistencia
+         </ion-button>
+         <ion-button  expand="full"  href="lista1"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
 </ion-content>
+<!-- Footer -->
+<ion-footer >
+  <ion-button expand="full" [routerLink]="['/home']" color="danger" >
+    <ion-icon slot="start" name="exit"></ion-icon>
+    Salir Cuenta
+   </ion-button>
+</ion-footer>

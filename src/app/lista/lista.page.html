@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor" class="alinear">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio-estudiante" class="titulo"></ion-back-button>
+      <ion-title class="titulo">Lista de curso</ion-title>
+    </ion-buttons>  
+  </ion-toolbar>
+</ion-header >
+
+
+<ion-content>
+  <ion-item *ngFor="let persona of personas">
+    <ion-avatar slot="start">
+      <img [src]="persona.foto" />
+    </ion-avatar>
+    <ion-label>{{persona.nombre}}</ion-label>
+  </ion-item>
+</ion-content>

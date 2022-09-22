@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'inicio-estudiante',
     loadChildren: () => import('./inicio-estudiante/inicio-estudiante.module').then( m => m.InicioEstudiantePageModule)
   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
+  },
+  {
+    path: 'lista1',
+    loadChildren: () => import('./lista1/lista1.module').then( m => m.Lista1PageModule)
+  },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
+  {
+    path: 'asistencia1',
+    loadChildren: () => import('./asistencia1/asistencia1.module').then( m => m.Asistencia1PageModule)
+  },
+  {
+    path: 'asistencia2',
+    loadChildren: () => import('./asistencia2/asistencia2.module').then( m => m.Asistencia2PageModule)
+  },
 
 ];
 

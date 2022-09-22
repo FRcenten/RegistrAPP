@@ -5,10 +5,47 @@
 </ion-header >
 
 <ion-content>
-<ion-button  expand="full" (click)="starscan()" color="dark">
- <ion-icon slot="start" name="qr-scanner"></ion-icon>
- Escanear
-</ion-button>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Matematica</ion-label>
+      </ion-item>
+      <div  class="ion-padding" slot="content">
+        <ion-button  expand="full" (click)="starscan()" color="dark">
+          Escanear
+         </ion-button>
+         <ion-button  expand="full"  href="lista"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Lenguaje</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-button  expand="full" (click)="starscan()" color="dark">
+          Escanear
+         </ion-button>
+         <ion-button  expand="full"  href="lista"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Ingles</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-button  expand="full" (click)="starscan()" color="dark">
+          Escanear
+         </ion-button>
+         <ion-button  expand="full"  href="clases"  color="dark">
+          Lista de estudiantes 
+         </ion-button>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
 <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
   <ion-icon slot="start" name="refresh"></ion-icon>
   Resetear
@@ -32,7 +69,7 @@
 <!-- Footer -->
 <ion-footer >
   <ion-button expand="full" [routerLink]="['/home']" color="danger" >
-    <ion-icon slot="start" name="close"></ion-icon>
+    <ion-icon slot="start" name="exit"></ion-icon>
     Salir Cuenta
    </ion-button>
 </ion-footer>

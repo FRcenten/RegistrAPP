@@ -48,4 +48,5 @@ export class RegistroPage implements OnInit {
       }
     localStorage.setItem('usuario',JSON.stringify(usuario));
   }
+ 
 }
